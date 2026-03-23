@@ -1,16 +1,27 @@
-# This is a sample Python script.
-
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
+import sys
+from app import SecureClientApp
 
 
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
+def main():
+    """
+    The main entry point of the Secure File Communication client.
+    It initializes the SecureClientApp and handles top-level interruptions.
+    """
+    try:
+        # Initialize and run the main application logic
+        client_app = SecureClientApp()
+        client_app.run()
+
+    except KeyboardInterrupt:
+        # Handle the user forcefully closing the app (e.g., Ctrl+C) gracefully
+        print("\n[INFO] Application terminated by the user. Exiting.")
+        sys.exit(0)
+
+    except Exception as e:
+        # Catch any completely unhandled exceptions that bubbled up to the top
+        print(f"\n[FATAL ERROR] An unexpected system error occurred: {e}")
+        sys.exit(1)
 
 
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
-
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+if __name__ == "__main__":
+    main()
