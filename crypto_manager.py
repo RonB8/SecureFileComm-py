@@ -3,7 +3,6 @@ from Crypto.PublicKey import RSA
 from Crypto.Cipher import PKCS1_OAEP, AES
 from Crypto.Util.Padding import pad
 
-
 class CryptoManager:
     """
     Manages all cryptographic operations for the client:
