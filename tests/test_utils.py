@@ -1,7 +1,7 @@
 import unittest
 
 # Importing the CRC function from utils
-from utils import calculate_memcrc
+from client.utils import calculate_memcrc
 
 
 class TestUtils(unittest.TestCase):

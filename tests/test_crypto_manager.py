@@ -5,7 +5,7 @@ from Crypto.PublicKey import RSA
 from Crypto.Util.Padding import unpad
 
 # Importing the CryptoManager class
-from crypto_manager import CryptoManager
+from client.crypto_manager import CryptoManager
 
 
 class TestCryptoManager(unittest.TestCase):

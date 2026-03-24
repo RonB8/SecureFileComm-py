@@ -2,8 +2,8 @@ import unittest
 import struct
 
 # Importing the classes and constants from our protocol module
-from protocol import RequestBuilder, ResponseParser
-from protocol import (
+from client.protocol import RequestBuilder, ResponseParser
+from client.protocol import (
     CMD_REGISTER, CMD_SEND_PUBLIC_KEY, CMD_SEND_FILE,
     CLIENT_ID_SIZE, NAME_MAX_LENGTH, PUBLIC_KEY_SIZE
 )

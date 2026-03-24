@@ -3,7 +3,7 @@ from unittest.mock import patch, mock_open
 import os
 
 # Importing the LocalFileManager class
-from storage import LocalFileManager
+from client.storage import LocalFileManager
 
 
 class TestLocalFileManager(unittest.TestCase):
