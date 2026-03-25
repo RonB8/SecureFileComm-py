@@ -26,7 +26,7 @@ class SecureClientApp:
         self.client_id = None
         self.file_path = None
 
-    def run(self):
+    def run(self, server_ip, server_port, client_name, file_path):
         """
         The main entry point for the client application flow.
         Reads configuration, decides whether to register or login, and sends the file.
@@ -34,8 +34,10 @@ class SecureClientApp:
         try:
             print("Starting Secure Client...")
 
-            # Read network and file target info from transfer.info
-            self.server_ip, self.server_port, self.client_name, self.file_path = self.storage.read_transfer_info()
+            self.server_ip = server_ip
+            self.server_port = server_port
+            self.client_name = client_name
+            self.file_path = file_path
 
             aes_key = None
 
